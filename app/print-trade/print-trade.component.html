@@ -1,0 +1,43 @@
+<div class="table" style="margin-top: 100px; font-weight: bold; margin-right: 5cm; ">
+
+<table class="table  table-striped">
+    <thead>
+      <tr>
+        <th >TradeNo</th>
+        <th >CustomerName</th>
+        <th >CurrencyPairs</th>
+        <th >Amount</th>
+        <th >Rate</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let data of datas">
+        <td>{{data.tradeNo}}</td>
+        <td>{{data.customerName}}</td>
+        <td>{{data.currencyPair}}</td>
+        <td>{{data.amount}}</td>
+        <td>{{data.rate}}</td>
+    </tr>
+  </table>
+</div>
+
+<div class="demo">
+  <nav class="pagination-outer" aria-label="Page navigation">
+      <ul class="pagination">
+          <li class="page-item">
+              <a href="#" class="page-link" aria-label="Previous">
+                  <span aria-hidden="true">«</span>
+              </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item active"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item">
+              <a href="#" class="page-link" aria-label="Next">
+                  <span aria-hidden="true">»</span>
+              </a>
+          </li>
+      </ul>
+  </nav>
+</div>
