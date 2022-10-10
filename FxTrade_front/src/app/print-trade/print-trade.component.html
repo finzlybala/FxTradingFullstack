@@ -1,0 +1,26 @@
+ <div class="container">
+ <table class="table table-bordered table-hover" style="background-color: rgb(167, 167, 156);">
+    <thead class="table-dark ">
+        <tr>
+            <th >TradeNo</th>
+            <th >CustomerName</th>
+            <th >CurrencyPairs</th>
+            <th >Amount</th>
+            <th >Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor ="let data of datas | paginate: { itemsPerPage: 7, currentPage: p }">
+            <td>{{data.tradeNo}}</td>
+            <td>{{data.customerName}}</td>
+            <td>{{data.currencyPair}}</td>
+            <td>{{data.amount}}</td>
+            <td>{{data.rate}}</td>
+          </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p = $event"
+      style="float:right ;"
+    ></pagination-controls>
+</div>
+ <button (click)="onClick()" class="btn btn-success" style="margin-left: 3cm;">Back</button>
