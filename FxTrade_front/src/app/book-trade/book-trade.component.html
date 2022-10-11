@@ -8,14 +8,14 @@
           <div class="form-group">
                 <label for="">CustomerName</label>
                 <input type="text" class="form-control" 
-                minlength="4"  pattern="^[a-zA-Z .]+" 
+                minlength="2" maxlength="28" pattern="^[^\s\.]+[-a-zA-Z\s]+([-a-zA-Z.]+)*$" 
                 ngModel name="customername" #customername="ngModel" ngModel id="name"required
                 
                 placeholder="Enter the Customername">
 
               <div *ngIf="customername.touched && !customername.valid"
               class="alert alert-danger">
-                ** Please enter the customer name ....
+                ** Please enter the valid customer name ....
 
                 <div *ngIf="customername.errors?.minlength">
                     ** Please enter the minimum length of customer name is {{customername.errors?.minlength.requiredLength}}
@@ -39,7 +39,7 @@
               <label for="">Amount:</label>
               <input type="number"  class="form-control" 
                 ngModel name="amount" #amount="ngModel" ngModel id="amount" required
-                placeholder="Enter the amount">
+                min="1" oninput="validity.valid||(value='')" placeholder="Enter the amount">
 
 
                <div *ngIf="amount.touched && amount.invalid"
@@ -55,6 +55,7 @@
           <mat-radio-button value="2">No</mat-radio-button>
           </mat-radio-group>
   
+        
 
           <br><br>
           <button [disabled]="!f.valid" value="book" class="btn btn-success">BOOK</button> &nbsp;     
@@ -72,4 +73,4 @@
 </div>
 
 </div>
-
+<img src="../../assets/robot.jpg" >

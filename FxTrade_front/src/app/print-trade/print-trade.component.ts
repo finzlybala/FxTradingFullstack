@@ -14,6 +14,7 @@ export class PrintTradeComponent implements OnInit {
               private router:Router) { }
 
   ngOnInit(): void {
+    document.body.className="bg_background"
     this.trade();
   }
 

@@ -1,1 +1,7 @@
-
+img{
+    position: absolute;
+    float: right;
+    width: 300px;
+    margin-top: -300px;
+    margin-left: 10in;
+}

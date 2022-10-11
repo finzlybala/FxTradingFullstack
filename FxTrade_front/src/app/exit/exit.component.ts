@@ -10,6 +10,7 @@ export class ExitComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    document.body.className="bg_background"
   }
 
 }
