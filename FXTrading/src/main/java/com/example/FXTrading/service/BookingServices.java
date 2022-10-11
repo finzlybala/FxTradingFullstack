@@ -27,7 +27,9 @@ import org.springframework.stereotype.Service;
 				return repository.findAll();
 			}
 			public String booking(Book book, String bookingconfirmation) {
-				double transferAmount=rate*book.getTransferAmount();
+				double transferAmount=rate * book.getTransferAmount();
+				book.setTransferAmount(transferAmount);
+				
 		    			 if(bookingconfirmation.equalsIgnoreCase("Book")) {
 		    				repository.save(new Print(++tradeNo, book.getCurrencyPair(), book.getCustomerName(), book.getTransferAmount(), rate));
 		    				

@@ -26,8 +26,8 @@ public class Book {
 		return transferAmount;
 	}
 
-	public void setTransferAmount(float transferAmount) {
-		this.transferAmount = transferAmount;
+	public void setTransferAmount(double transferAmount2) {
+		this.transferAmount = transferAmount2;
 	}
 
 	public String getCustomerName() {
